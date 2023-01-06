@@ -1,0 +1,5 @@
+# Maintain and move to project root /app
+ENDPOINT=https://your-cosmos.documents.azure.com:443/
+COMSOSKEY=
+DATABASEID=SampleDB
+CONTAINERID=SampleContainer
