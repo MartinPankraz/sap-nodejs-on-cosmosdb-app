@@ -1,0 +1,8 @@
+---
+applications:
+- name: nodejs-on-azure-cosmos
+  routes:
+    - route: node-1234-aaaa-5678.cfapps.eu20.hana.ondemand.com
+  path: app
+  memory: 128M
+  buildpack: nodejs_buildpack
