@@ -1,6 +1,6 @@
 # Azure Cosmos DB with SAP Private Link quickstart sample
 
-Example project showcasing a resilient **multi-region** app on SAP BTP powered by globally distributed **Azure Cosmos DB**. App was built upon the SAP Developer tutorial [Create a Node.js Application via Cloud Foundry Command Line Interface](https://developers.sap.com/tutorials/btp-cf-buildpacks-node-create.html) and the SAP Private Link for [CosmosDB](https://help.sap.com/docs/PRIVATE_LINK/42acd88cb4134ba2a7d3e0e62c9fe6cf/663ed5631cfd4ef0a4bd89ca00266943.html). It relies on [Express](https://expressjs.com/) for minimal server setup.
+Example project showcasing a resilient **multi-region** app on SAP BTP powered by globally distributed **Azure Cosmos DB**. App was built upon the SAP Developer tutorial [Create a Node.js Application via Cloud Foundry Command Line Interface](https://developers.sap.com/tutorials/btp-cf-buildpacks-node-create.html) and the SAP Private Link for [Cosmos DB](https://help.sap.com/docs/PRIVATE_LINK/42acd88cb4134ba2a7d3e0e62c9fe6cf/663ed5631cfd4ef0a4bd89ca00266943.html). It relies on [Fastify](https://www.fastify.io/) instead of [Express](https://expressjs.com/) for a leaner setup.
 
 ## Getting started 🚀
 
@@ -26,7 +26,9 @@ cf push
 
 ## Full blown setup 🌏
 
-<img src="img/cosmos-pls-overview.png" alt="architecture overview with emphasis on global deployment" width="200"/>
+This repos sheds light on the private connectivity aspect. Learn more about intelligent routing in this joint Microsoft+SAP [Discovery Center mission](https://discovery-center.cloud.sap/missiondetail/3603/).
+
+<img src="img/cosmos-pls-overview.png" alt="architecture overview with emphasis on global deployment" style="width:300px;"/>
 
 ## Contributions and community work 👩🏼‍🤝‍👨🏽
 

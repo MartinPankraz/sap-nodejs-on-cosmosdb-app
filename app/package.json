@@ -28,7 +28,11 @@
   "homepage": "https://github.com/MartinPankraz/sap-nodejs-on-cosmosdb-app#readme",
   "dependencies": {
     "@azure/cosmos": "^3.17.2",
-    "express": "^4.18.2",
-    "dotenv": "^16.0.3"
+    "@fastify/static": "^6.6.0",
+    "dotenv": "^16.0.3",
+    "fastify": "^4.11.0"
+  },
+  "devDependencies": {
+    "js-standard": "^1.0.1"
   }
 }
