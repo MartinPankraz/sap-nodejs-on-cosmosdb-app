@@ -14,6 +14,12 @@ Run SAP Business Application Stuido or compatible IDE of your choice (I like [Gi
 
 ```cmd
 git clone https://github.com/MartinPankraz/sap-nodejs-on-cosmosdb-app.git
+cp templates/.env app
+```
+
+Maintain your cosmos credentials in the `.env` file. From Cosmos DB UI navigate to Settings -> Keys -> read-write Keys -> Primary Key.
+
+```cmd
 cd app
 npm install
 npm start
