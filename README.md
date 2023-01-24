@@ -10,13 +10,18 @@ Create `SampleDB` from **Quick Launch wizard** in Cosmos DB on the [Azure portal
 
 Create a [SAP Private Link for Cosmos DB](https://help.sap.com/docs/PRIVATE_LINK/42acd88cb4134ba2a7d3e0e62c9fe6cf/663ed5631cfd4ef0a4bd89ca00266943.html) named cosmos-pls or rename service in [manifest.yml](manifest.yml)
 
+Run SAP Business Application Stuido or compatible IDE of your choice (I like [GitHub Codespaces](https://github.com/features/codespaces) for ready to run environments).
+
 ```cmd
+git clone https://github.com/MartinPankraz/sap-nodejs-on-cosmosdb-app.git
 cd app
 npm install
 npm start
 ```
 
 Navigate to the addresses tab and enjoy the private response from Cosmos🪐☄️
+
+> **Warning** - when executing **locally** you need a connection to your SAP Private Link service (remember Cosmos is not publicly reachable!). Have a look [here](https://blogs.sap.com/2021/10/05/btp-private-linky-swear-with-azure-how-do-i-debug-and-test-with-live-data/) how to use ssh with cf.
 
 ## Deploy to BTP 🪂
 
@@ -31,6 +36,8 @@ cf push
 This repos sheds light on the private connectivity aspect only. Learn more about intelligent routing in this joint Microsoft+SAP [Discovery Center mission](https://discovery-center.cloud.sap/missiondetail/3603/) and this [blog post](https://blogs.sap.com/2021/06/11/sap-where-can-i-get-toilet-paper-an-implementation-of-the-geodes-pattern-with-s4-btp-and-azure-cosmosdb/).
 
 <img src="img/cosmos-pls-overview.png" alt="architecture overview with emphasis on global deployment" style="width:800px;"/>
+
+Above architecture can be considered a mix of high-availability and failover concepts. How so? The SAP Private Link in each BTP CloudFoundry space is configured to be able to reach both Cosmos regions and the app layer responds to the end-user as per the intelligent routing setting (fastest, closest etc.).
 
 ## Contributions and community work 👩🏼‍🤝‍👨🏽
 
