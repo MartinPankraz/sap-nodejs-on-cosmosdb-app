@@ -13,14 +13,14 @@ dotenv.config({ path: path.resolve(__dirname, '.env') })
 const DATABASEID = process.env.DATABASEID
 const CONTAINERID = process.env.CONTAINERID
 
-fastify.register(require('@fastify/static'), {
-  root: path.join(__dirname, 'public')
-})
+fastify.register(require("@fastify/view"), {
+  engine: {ejs: require('ejs')}
+});
 
 const client = new CosmosClient({ endpoint: process.env.ENDPOINT, key: process.env.COMSOSKEY })
 
 fastify.get('/', (request, reply) => {
-  reply.sendFile('index.html')
+  reply.view("/views/index.ejs", { hello: "world!" });
 })
 
 // Get all addresses from SampleDB. See more examples here: https://learn.microsoft.com/azure/cosmos-db/nosql/quickstart-nodejs?tabs=azure-portal%2Cwindows
@@ -35,9 +35,10 @@ fastify.get('/addresses', async (request, reply) => {
 
   for (const queryResult of results) {
     let resultString = JSON.stringify(queryResult)
-    fastify.log.info(`\tQuery returned ${resultString}\n`)
+    //fastify.log.info(`\tQuery returned ${resultString}\n`)
   }
-  reply.send(results)
+
+  return reply.view("/views/addresses.ejs", { addresses: results });
 })
 
 const portNumber = process.env.PORT || 4000
