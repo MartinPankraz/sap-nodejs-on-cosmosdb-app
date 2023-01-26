@@ -41,9 +41,11 @@ cf push
 
 This repos sheds light on the private connectivity aspect only. Learn more about intelligent routing in this joint Microsoft+SAP [Discovery Center mission](https://discovery-center.cloud.sap/missiondetail/3603/) and this [blog post](https://blogs.sap.com/2021/06/11/sap-where-can-i-get-toilet-paper-an-implementation-of-the-geodes-pattern-with-s4-btp-and-azure-cosmosdb/).
 
-<img src="img/cosmos-pls-overview.png" alt="architecture overview with emphasis on global deployment" style="width:800px;"/>
+<img src="img/cosmos-pls-overview-new.png" alt="architecture overview with emphasis on global deployment" style="width:800px;"/>
 
 Above architecture can be considered a mix of high-availability and failover concepts. How so? The SAP Private Link in each BTP CloudFoundry space is configured to be able to reach both Cosmos regions and the app layer responds to the end-user as per the intelligent routing setting (fastest, closest etc.).
+
+Consider the [ABAP SDK for Azure](https://github.com/microsoft/ABAP-SDK-for-Azure) for additional upload scenarios to Cosmos DB.
 
 ## Contributions and community work 👩🏼‍🤝‍👨🏽
 
