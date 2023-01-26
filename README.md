@@ -47,6 +47,8 @@ Above architecture can be considered a mix of high-availability and failover con
 
 Consider the [ABAP SDK for Azure](https://github.com/microsoft/ABAP-SDK-for-Azure) for additional upload scenarios to Cosmos DB.
 
+Learn more about Azure IoT and Cosmos DB [here](https://learn.microsoft.com/azure/architecture/solution-ideas/articles/iot-using-cosmos-db).
+
 ## Contributions and community work 👩🏼‍🤝‍👨🏽
 
 Follow [this thread](https://github.com/sapmentors/cds-pg/issues/355) to stay up to date with CDS for Azure CosmosDB and SAP CAP driven by the amazing SAP Mentors. Feel free to comment under the associated blog posts or create [issues](https://github.com/MartinPankraz/sap-nodejs-on-cosmosdb-app/issues) here on GitHub.
