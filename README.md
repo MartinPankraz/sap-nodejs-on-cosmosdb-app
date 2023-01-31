@@ -55,9 +55,6 @@ Consider the [ABAP SDK for Azure](https://github.com/microsoft/ABAP-SDK-for-Azur
 
 Lear more about choosing an API for Azure Cosmos DB [here](https://learn.microsoft.com/azure/cosmos-db/choose-api).
 
-> **Note**:
-> Check the [SAP Estimator](https://discovery-center.cloud.sap/estimator/?commercialModel=cpea) and [Azure Pricing Calculator](https://azure.microsoft.com/pricing/calculator/) to get a ballpark overview on pricing details.
-
 | Database | Type | SAP Private Link enabled | Hosted on BTP/customer’s Azure env | Supported by [SAP CAP](https://cap.cloud.sap/docs/) natively |
 |---|---|---|---|---|
 | [HANA Cloud](https://discovery-center.cloud.sap/serviceCatalog/sap-hana-cloud?region=all&tab=service_plan&provider=azure&commercialModel=cpea) | Managed, closed-source, in-memory db service for relational, graph, spatial and document structures | Not yet | Yes/No | Yes |
@@ -75,6 +72,9 @@ Lear more about choosing an API for Azure Cosmos DB [here](https://learn.microso
 <sup>1</sup> General Purpose, Gen5 2 vCore
 
 <sup>2</sup> [Request Units](https://learn.microsoft.com/azure/cosmos-db/request-units) need to be understood for a proper comparison. Also paritioning strategy impacting number of requests.
+
+> **Note**:
+> Check the [SAP Estimator](https://discovery-center.cloud.sap/estimator/?commercialModel=cpea) and [Azure Pricing Calculator](https://azure.microsoft.com/pricing/calculator/) to get a ballpark overview on pricing details.
 
 As you can see there is a variety of choice of data bases for your BTP app with different capabilities and implications. The associated [blog post](https://blogs.sap.com/2023/01/27/sap-private-linky-swear-with-azure-global-scale-with-azure-cosmos-db-with-sap-private-link/) and prototype use [Azure Cosmos DB for NoSQL](https://learn.microsoft.com/azure/cosmos-db/introduction) in a multi-region setup with **provisioned throughput**.
 
